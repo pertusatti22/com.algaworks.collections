@@ -1,8 +1,8 @@
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Governo {
 
@@ -34,11 +34,37 @@ public class Governo {
     public BigDecimal calcularGastosComSalario(String partidoPolitico) {
         // implementar busca de políticos para o partido informado
         // e cálculo dos salários
+        if (partidoPolitico != null) {
+            List<Politico> politicos = this.partidosPoliticos.get(partidoPolitico);
+            BigDecimal totalSalarios = BigDecimal.ZERO;
+            for (Politico p : politicos) {
+                BigDecimal salario = p.getCargo().getSalario();
+                totalSalarios = totalSalarios.add(salario);
+            }
+            return totalSalarios;
+        } else {
+            return null;
+        }
     }
 
     public BigDecimal calcularGastosComSalarioParaCargo(Cargo cargo, String partidoPolitico) {
         // implementar busca dos políticos para o partido e cargo informados
         // e cálculo dos salários
+        if (partidoPolitico != null) {
+            List<Politico> politicos = this.partidosPoliticos.get(partidoPolitico);
+            BigDecimal totalSalarios = BigDecimal.ZERO;
+            for (Politico p : politicos) {
+                Cargo c = p.getCargo();
+                if (c == cargo) {
+                    BigDecimal salario = p.getCargo().getSalario();
+                    totalSalarios = totalSalarios.add(salario);
+                }
+            }
+            return totalSalarios;
+        } else {
+            return null;
+        }
+
     }
 
 }

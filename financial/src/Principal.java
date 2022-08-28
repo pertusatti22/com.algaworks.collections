@@ -80,5 +80,4 @@ public class Principal {
         System.out.println("Gastos com prefeitos do partido LDRS: "
                 + formatador.format(gastosPrefeitosLdrs.doubleValue()));
     }
-
 }
