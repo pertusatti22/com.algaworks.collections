@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="com.algaworks.collections:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/com_algaworks_collections_jar</output-path>
+    <root id="archive" name="com.algaworks.collections.jar">
+      <element id="module-output" name="com.algaworks.collections" />
+    </root>
+  </artifact>
+</component>

@@ -1,8 +1,16 @@
 import java.text.DecimalFormat;
 import java.math.BigDecimal;
 
+/**
+ * The type Principal.
+ */
 public class Principal {
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         DecimalFormat formatador = new DecimalFormat("R$ #,##0.00");
 
